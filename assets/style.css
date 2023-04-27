@@ -1,0 +1,13 @@
+h2{
+    font-family: 'Roboto', sans-serif;
+}
+
+.titre{
+    font-family: 'Shrikhand', cursive;
+}
+
+.card{
+    background-color: white;
+    border-radius: 20px;
+    gap: 18px;
+}
