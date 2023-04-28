@@ -1,4 +1,4 @@
-/*** Page d'accueil ***/
+/***** Page d'accueil *****/
 /*** Base ***/
 .primaire{
     color: #9356dc;
@@ -173,3 +173,6 @@ li{
     color: #FFFFFF;
     padding-right: 11px;
 }
+
+
+/***** Menu *****/
