@@ -176,3 +176,21 @@ li{
 
 
 /***** Menu *****/
+.section-photo{
+    width: 375px;
+    height: 275px;
+}
+
+.photo{
+    object-fit: cover;
+}
+
+/*** Carte ***/
+.plat-carte{
+
+}
+
+.prix{
+
+}
+
