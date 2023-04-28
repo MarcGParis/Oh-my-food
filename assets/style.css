@@ -1,3 +1,4 @@
+/*** Page d'accueil ***/
 /*** Base ***/
 .primaire{
     color: #9356dc;
@@ -83,11 +84,11 @@ header p{
 /*** Fonctionnement ***/
 .fonctionnement{
     height: 440px;
-    margin: 0px;
 }
 
 .fonctionnement h2{
-    margin: 48px 80px 26px 20px;
+    margin: 0px;
+    padding: 48px 80px 10px 20px;
 }
 
 .btn-fonctionnement{
@@ -99,19 +100,22 @@ header p{
 }
 
 .btn-fonctionnement p{
-    margin: 29px 38px 28px 73px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 28px 38px 28px 73px;
 }
 
 /*** Restaurants ***/
 .restaurants{
     background-color: #F3F3F3;
-    margin: 0px;
     height: 1226px;
 }
 
 .restaurants h2{
     padding-top: 54px;
     padding-left: 20px;
+    margin: 0px;
 }
 
 .card{
@@ -132,11 +136,11 @@ header p{
 }
 
 .card h3{
-    padding-left: 13px;
+    margin: 16px 0px 5px 13px;
 }
 
 .card p{
-    padding-left: 13px;
+    margin: 0px 0px 12px 13px;
 }
 
 /*** Footer ***/
@@ -149,11 +153,12 @@ header p{
     color: #FFFFFF;
     font-size: 18px;
     margin: 0px;
-    padding: 22px 25px;
+    padding: 22px 0px 16px 25px;
 }
 
 ul{
     list-style: none;
+    margin-top: 0px;
     padding-left: 25px;
     padding-bottom: 22px;
 }
