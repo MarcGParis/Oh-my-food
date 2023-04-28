@@ -1,13 +1,170 @@
-h2{
+/*** Base ***/
+.primaire{
+    color: #9356dc;
+}
+.secondaire{
+    color: #FF79DA;
+}
+
+.tertiaire{
+    color: #99E2D0;
+}
+
+body{
+    width: 375px;
+    margin: 0px;
     font-family: 'Roboto', sans-serif;
 }
 
-.titre{
-    font-family: 'Shrikhand', cursive;
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/*** Header ***/
+.logo{
+    height: 30px;
+    width: 162px;
+    padding: 20px 108px 20px 106px;
+}
+
+.localisation{
+    background-color: #EAEAEA;
+    height: 50px;
+    margin: 0px;
+}
+
+.point{
+    width: 12px;
+    height: 16px;
+    padding-right: 17px;
+}
+
+header p{
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/*** Explorer ***/
+.explorer{
+    height: 288px;
+    background-color: #F3F3F3;
+}
+
+.explorer h2{
+    margin: 0px;
+    padding: 40px 58px 0px 42px;
+    text-align: center;
+}
+
+.explorer p{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.bouton-explorer{
+    margin: 27px 75px 57px 82px;
+    padding: 13px 19px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+/*** Fonctionnement ***/
+.fonctionnement{
+    height: 440px;
+    margin: 0px;
+}
+
+.fonctionnement h2{
+    margin: 48px 80px 26px 20px;
+}
+
+.btn-fonctionnement{
+    width: 322px;
+    height: 72px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin: 25px 20px 25px 33px
+}
+
+.btn-fonctionnement p{
+    margin: 29px 38px 28px 73px;
+}
+
+/*** Restaurants ***/
+.restaurants{
+    background-color: #F3F3F3;
+    margin: 0px;
+    height: 1226px;
+}
+
+.restaurants h2{
+    padding-top: 54px;
+    padding-left: 20px;
 }
 
 .card{
+    width: 340px;
+    height: 251px;
     background-color: white;
-    border-radius: 20px;
-    gap: 18px;
+    border-radius: 15px;
+    margin: 18px 18px 18px 17px;
+}
+
+.plat{
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    box-sizing: border-box;
+}
+
+.card h3{
+    padding-left: 13px;
+}
+
+.card p{
+    padding-left: 13px;
+}
+
+/*** Footer ***/
+.footer{
+    background-color: #353535;
+}
+
+.footer h3{
+    font-family: 'Shrikhand', cursive;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 0px;
+    padding: 22px 25px;
+}
+
+ul{
+    list-style: none;
+    padding-left: 25px;
+    padding-bottom: 22px;
+}
+
+li{
+    padding-bottom: 7px;
+}
+
+.icone-footer{
+    width: 11px;
+    height: 13px;
+    color: #FFFFFF;
+    padding-right: 11px;
 }
