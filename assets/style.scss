@@ -1,25 +1,31 @@
 /***** Page d'accueil *****/
 /*** Base ***/
-.primaire{
-    color: #9356dc;
-}
-.secondaire{
-    color: #FF79DA;
+$main-color: #9356dc;
+
+$second-color: #FF79DA;
+
+$third-color: #99E2D0;
+
+$mainbackground-color: #EAEAEA;
+
+$text-color: #0000;
+
+@mixin card-shadow{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.tertiaire{
-    color: #99E2D0;
+@mixin background-btn{
+    background: linear-gradient(200.64deg, $main-color -5.2%, $second-color 110.74%)
 }
 
 body{
-    
     margin: 0px;
     font-family: 'Roboto', sans-serif;
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: $text-color;
 }
 
 /*** Header ***/
@@ -27,6 +33,15 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    p{
+        font-weight: 500;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 0px;
+    }
 }
 
 .logo{
@@ -36,7 +51,7 @@ header{
 }
 
 .localisation{
-    background-color: #EAEAEA;
+    background-color: $mainbackground-color;
     display: flex;
     justify-content: center;
     margin: 0px;
@@ -46,50 +61,42 @@ header{
     margin-right: 17px;
 }
 
-header p{
-    font-weight: 500;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 0px;
-}
-
 /*** Explorer ***/
 .explorer{
     height: 260px;
-    background-color: #F3F3F3;
+    background-color: $mainbackground-color;
+
+    h2{
+        margin: 0px;
+        padding: 40px 58px 0px 42px;
+        text-align: center;
+    }
+
+        p{
+            font-style: normal;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 21px;
+            text-align: center;
+            margin: 15px 50px 30px;
+        }
 }
 
-.explorer h2{
-    
-    margin: 0px;
-    padding: 40px 58px 0px 42px;
-    text-align: center;
-}
-
-.explorer p{
-    font-style: normal;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 21px;
-    text-align: center;
-    margin: 15px 50px 30px;
-}
 
 .bouton-explorer{
     margin: 10px 75px 57px 82px;
     padding: 13px 19px;
     border-radius: 25px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    @include card-shadow;
+    @include background-btn;
+
+    a{
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
 }
 
-.bouton-explorer a{
-    color: white;
-    display: flex;
-    justify-content: center;
-}
 
 /*** Fonctionnement ***/
 .fonctionnement{
@@ -190,11 +197,6 @@ header p{
 
 .card p{
     margin: 0px 0px 12px 13px;
-}
-
-.coeur{
-    display: flex;
-    justify-content: flex-end;
 }
 
 /*** Footer ***/
