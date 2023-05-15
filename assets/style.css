@@ -32,7 +32,9 @@ header{
 .logo{
     height: 30px;
     width: 162px;
-    margin: 20px auto;
+    margin: 20px 110px;
+    display: flex;
+    justify-content: center;
 }
 
 .localisation{
@@ -73,8 +75,12 @@ header p{
     font-weight: 300;
     font-size: 15px;
     line-height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 15px 50px 30px;
+    margin: 0px 26px 0px 34px;
 }
 
 .bouton-explorer{
@@ -91,14 +97,19 @@ header p{
     justify-content: center;
 }
 
+.bouton-explorer:hover{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
 /*** Fonctionnement ***/
 .fonctionnement{
     height: 440px;
+    
 }
 
 .fonctionnement h2{
+    padding: 48px 0px 0px 20px;
     margin: 0px;
-    padding: 48px 80px 10px 20px;
 }
 
 .chiffre{
@@ -168,7 +179,6 @@ header p{
 }
 
 .card{
-    width: 340px;
     height: 251px;
     background-color: white;
     border-radius: 15px;
@@ -195,6 +205,10 @@ header p{
 .coeur{
     display: flex;
     justify-content: flex-end;
+}
+
+.fa-solid {
+    background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 /*** Footer ***/
@@ -241,16 +255,19 @@ li{
 }
 
 .photo{
-    position: absolute;
     width: 375px;
     height: 275px;
+    display: flex;
+    justify-content: center;
 }
 
 /*** Carte ***/
 .section-menu{
-    height: 1121px;
+    height: 1300px;
     background-color: #F7F7F7;
     border-radius: 40px 40px 0px 0px;
+    margin: -40px 0px 0px 0px;
+    position: absolute;
 }
 
 .section-menu h2{
@@ -263,14 +280,13 @@ li{
 }
 
 .section-menu h3{
-    font-family: 'Shrikhand';
     font-weight: 400;
     margin: 0px;
     padding: 22px 212px 16px 25px;
 }
 .plat-carte{
     width: 323px;
-    height: 72px;
+    height: 45px;
     margin: 0px 13px 12px 13px;
     padding: 12px 13.5px 12px 15px;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
@@ -279,11 +295,13 @@ li{
 
 .plat-carte h4{
     margin: 0px;
+    padding-bottom: 5px;
 }
 
 .plat-carte p{
     margin: 0px;
     font-size: 15px;
+
 }
 
 .prix{
