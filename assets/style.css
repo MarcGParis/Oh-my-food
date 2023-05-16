@@ -1,3 +1,8 @@
+*, ::before, 
+::after {
+    box-sizing:border-box
+}
+
 /***** Page d'accueil *****/
 /*** Base ***/
 .primaire{
@@ -12,7 +17,6 @@
 }
 
 body{
-    
     margin: 0px;
     font-family: 'Roboto', sans-serif;
 }
@@ -24,6 +28,7 @@ a{
 
 /*** Header ***/
 header{
+    height: 113px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,42 +37,29 @@ header{
 .logo{
     height: 30px;
     width: 162px;
-    margin: 20px 110px;
-    display: flex;
-    justify-content: center;
+    margin: auto;
 }
 
 .localisation{
     background-color: #EAEAEA;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin: 0px;
+    padding: 15px;
 }
 
 .fa-location-dot{
     margin-right: 17px;
 }
 
-header p{
-    font-weight: 500;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 0px;
-}
-
 /*** Explorer ***/
 .explorer{
-    height: 260px;
     background-color: #F3F3F3;
+    text-align: center;
 }
 
 .explorer h2{
-    
     margin: 0px;
-    padding: 40px 58px 0px 42px;
-    text-align: center;
+    padding: 40px 58px 20px 42px;
 }
 
 .explorer p{
@@ -75,36 +67,30 @@ header p{
     font-weight: 300;
     font-size: 15px;
     line-height: 21px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     margin: 0px 26px 0px 34px;
 }
-
-.bouton-explorer{
-    margin: 10px 75px 57px 82px;
-    padding: 13px 19px;
+.explorer button{
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
     border-radius: 25px;
+    padding: 13px 19px;
+    margin: 30px;
+    background-image: linear-gradient(0deg, #9356dc, #FF79DA);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
-.bouton-explorer a{
+.explorer a{
     color: white;
-    display: flex;
-    justify-content: center;
 }
 
-.bouton-explorer:hover{
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+.explorer button:hover{
+    opacity: 0.9;
 }
 
 /*** Fonctionnement ***/
 .fonctionnement{
-    height: 440px;
-    
+    counter-reset: chiffre;
 }
 
 .fonctionnement h2{
@@ -112,46 +98,42 @@ header p{
     margin: 0px;
 }
 
-.chiffre{
-    position: absolute;
-    left: 20px;
+ol{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.fonctionnement li{
+    list-style-type: none;
+    background-color: #F7F7F7;
+    padding: 28px 38px;
+    margin-right: 40px;
+    flex-grow: 1;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.fonctionnement li::before{
+    content: "" counter(chiffre); 
+    counter-increment: chiffre;
+    color: white;
+    background-color: #9356DC;
+    padding: 10px;
     width: 24px;
     height: 24px;
-    background: #9356DC;
-    border-radius: 40px;
-}
-
-.btn-fonctionnement i{
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    margin: 0px 23px;
+    position: absolute;
+    bottom: 25px;
+    left: -10px;
 }
 
-.fonctionnement p{
-    color: white;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    margin-left: 10px;
-}
-
-.btn-fonctionnement{
-    width: 322px;
-    height: 72px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    margin: 25px 20px 25px 33px;
-    display: flex;
-    flex-direction: row;
-}
-
-.btn-fonctionnement p{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 28px 38px 28px 0px;
-    color: black
+.fa-solid{
+    margin-right: 20px;
 }
 
 .fa-mobile-screen-button{
@@ -231,7 +213,7 @@ ul{
     padding-bottom: 22px;
 }
 
-li{
+.footer li{
     padding-bottom: 7px;
 }
 
@@ -307,4 +289,11 @@ li{
 .prix{
     display: flex;
     justify-content: flex-end;
+}
+
+/***media queries***/
+@media (max-width: 1080px) {
+    .fonctionnement{
+        flex-direction: column;
+    }
 }

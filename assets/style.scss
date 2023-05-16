@@ -11,11 +11,11 @@ $mainbackground-color: #EAEAEA;
 $text-color: #0000;
 
 @mixin card-shadow{
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 @mixin background-btn{
-    background: linear-gradient(200.64deg, $main-color -5.2%, $second-color 110.74%)
+    background: linear-gradient(0deg, #9356dc, #FF79DA)
 }
 
 body{
@@ -30,31 +30,23 @@ a{
 
 /*** Header ***/
 header{
+    height: 113px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    p{
-        font-weight: 500;
-        font-size: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 16px 0px;
-    }
 }
 
 .logo{
     height: 30px;
     width: 162px;
-    margin: 20px auto;
+    margin: auto;
 }
 
 .localisation{
-    background-color: $mainbackground-color;
-    display: flex;
-    justify-content: center;
+    background-color: #EAEAEA;
+    text-align: center;
     margin: 0px;
+    padding: 15px;
 }
 
 .fa-location-dot{
@@ -63,38 +55,39 @@ header{
 
 /*** Explorer ***/
 .explorer{
-    height: 260px;
-    background-color: $mainbackground-color;
+    background-color: #F3F3F3;
+    text-align: center;
 
     h2{
         margin: 0px;
-        padding: 40px 58px 0px 42px;
-        text-align: center;
+        padding: 40px 58px 20px 42px;
     }
-
         p{
             font-style: normal;
             font-weight: 300;
             font-size: 15px;
             line-height: 21px;
-            text-align: center;
-            margin: 15px 50px 30px;
+            margin: 0px 26px 0px 34px;
         }
-}
+        
+            button{
+                font-weight: 500;
+                font-size: 16px;
+                border: none;
+                border-radius: 25px;
+                padding: 13px 19px;
+                margin: 30px;
+                @include background-btn;
+                @include card-shadow;
+            }
 
+                a{
+                    color: white;
+                }
 
-.bouton-explorer{
-    margin: 10px 75px 57px 82px;
-    padding: 13px 19px;
-    border-radius: 25px;
-    @include card-shadow;
-    @include background-btn;
-
-    a{
-        color: white;
-        display: flex;
-        justify-content: center;
-    }
+                    button:hover{
+                        opacity: 0.9;
+                    }
 }
 
 
