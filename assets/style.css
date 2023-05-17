@@ -91,6 +91,7 @@ header{
 /*** Fonctionnement ***/
 .fonctionnement{
     counter-reset: chiffre;
+    margin-right: 40px;
 }
 
 .fonctionnement h2{
@@ -100,8 +101,8 @@ header{
 
 ol{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    gap: 25px;
     margin-bottom: 40px;
 }
 
@@ -109,7 +110,6 @@ ol{
     list-style-type: none;
     background-color: #F7F7F7;
     padding: 28px 38px;
-    margin-right: 40px;
     flex-grow: 1;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -126,6 +126,7 @@ ol{
     height: 24px;
     border-radius: 50%;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: absolute;
     bottom: 25px;
@@ -151,7 +152,6 @@ ol{
 /*** Restaurants ***/
 .restaurants{
     background-color: #F3F3F3;
-    height: 1226px;
 }
 
 .restaurants h2{
@@ -164,13 +164,32 @@ ol{
     height: 251px;
     background-color: white;
     border-radius: 15px;
-    margin: 18px 18px 18px 17px;
+    margin: 18px;
+}
+
+.nouveau{
+    border: 1px solid red;
+    position: relative;
+}
+
+.nouveau::before{
+    content: "Nouveau";
+    position: absolute;
+    width: 80px;
+    height: 29px;
+    background-color: #99E2D0;
+    color: #008766;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 9px;
+    top: 9px;
 }
 
 .plat{
     width: 100%;
     height: 65%;
-    object-fit: cover;
+    background-size: cover;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     box-sizing: border-box;
@@ -283,17 +302,9 @@ ul{
 .plat-carte p{
     margin: 0px;
     font-size: 15px;
-
 }
 
 .prix{
     display: flex;
     justify-content: flex-end;
-}
-
-/***media queries***/
-@media (max-width: 1080px) {
-    .fonctionnement{
-        flex-direction: column;
-    }
 }
