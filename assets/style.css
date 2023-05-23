@@ -1,5 +1,4 @@
-*, ::before, 
-::after {
+*{ 
     box-sizing:border-box
 }
 
@@ -86,11 +85,11 @@ header{
 
 .explorer button:hover{
     opacity: 0.9;
+    scale: 1;
 }
 
 /*** Fonctionnement ***/
 .fonctionnement{
-    counter-reset: chiffre;
     margin-right: 40px;
 }
 
@@ -116,9 +115,7 @@ ol{
     position: relative;
 }
 
-.fonctionnement li::before{
-    content: "" counter(chiffre); 
-    counter-increment: chiffre;
+.fonctionnement span{
     color: white;
     background-color: #9356DC;
     padding: 10px;
@@ -165,10 +162,10 @@ ol{
     background-color: white;
     border-radius: 15px;
     margin: 18px;
+    position: relative;
 }
 
 .nouveau{
-    border: 1px solid red;
     position: relative;
 }
 
@@ -182,8 +179,10 @@ ol{
     display: flex;
     justify-content: center;
     align-items: center;
-    right: 9px;
-    top: 9px;
+    right: 15px;
+    top: 15px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .plat{
@@ -193,6 +192,7 @@ ol{
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     box-sizing: border-box;
+    object-fit: cover;
 }
 
 .card h3{
@@ -204,12 +204,10 @@ ol{
 }
 
 .coeur{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.fa-solid {
-    background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    font-size: 22px;
+    position: absolute;
+    right: 20px;
+    bottom: 33px;
 }
 
 /*** Footer ***/
@@ -307,4 +305,49 @@ ul{
 .prix{
     display: flex;
     justify-content: flex-end;
+}
+
+@media (min-width: 1135px) {
+    ol{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .fonctionnement{
+        padding: 0% 7%;
+    }
+    
+    .restaurants{
+        padding: 0% 2%;
+    }
+
+    .restaurants h2{
+        padding-left: 7%;
+    }
+
+    .desktopcard{
+        display: flex;
+        flex-direction: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card{
+        width: 40%;
+        margin: 25px 50px;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    .footer h3{ 
+        margin: 57px 50px 30px 16px;
+    }
+
+    .footer ul{
+    }
+
 }

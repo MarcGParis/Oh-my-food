@@ -57,19 +57,15 @@ header{
 .explorer{
     background-color: #F3F3F3;
     text-align: center;
-
     h2{
         margin: 0px;
         padding: 40px 58px 20px 42px;
-    }
         p{
             font-style: normal;
             font-weight: 300;
             font-size: 15px;
             line-height: 21px;
             margin: 0px 26px 0px 34px;
-        }
-        
             button{
                 font-weight: 500;
                 font-size: 16px;
@@ -79,26 +75,34 @@ header{
                 margin: 30px;
                 @include background-btn;
                 @include card-shadow;
-            }
-
                 a{
                     color: white;
-                }
-
                     button:hover{
                         opacity: 0.9;
                     }
+                }
+            }
+        }
+    }
 }
 
 
 /*** Fonctionnement ***/
 .fonctionnement{
     height: 440px;
-}
-
-.fonctionnement h2{
-    margin: 0px;
-    padding: 48px 80px 10px 20px;
+    .h2{
+        margin: 0px;
+        padding: 48px 80px 10px 20px;
+        .li{
+            list-style-type: none;
+            background-color: #F7F7F7;
+            padding: 28px 38px;
+            flex-grow: 1;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            position: relative;
+        }
+    }
 }
 
 .chiffre{
@@ -116,13 +120,6 @@ header{
     margin: 0px 23px;
 }
 
-.fonctionnement p{
-    color: white;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    margin-left: 10px;
-}
 
 .btn-fonctionnement{
     width: 322px;
