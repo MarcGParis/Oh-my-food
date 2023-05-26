@@ -2,6 +2,70 @@
     box-sizing:border-box
 }
 
+/***loader***/
+/*<span class="loader"></span>*/
+.loader {
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+  }
+
+  .loader:before,
+  .loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+  .loader:before {
+    animation: ball1 1s infinite;
+    background-color: #fff;
+    box-shadow: 30px 0 0 #ff3d00;
+    margin-bottom: 10px;
+  }
+  .loader:after {
+    animation: ball2 1s infinite;
+    background-color: #ff3d00;
+    box-shadow: 30px 0 0 #fff;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg) scale(0.8) }
+    50% { transform: rotate(360deg) scale(1.2) }
+    100% { transform: rotate(720deg) scale(0.8) }
+  }
+
+  @keyframes ball1 {
+    0% {
+      box-shadow: 30px 0 0 #ff3d00;
+    }
+    50% {
+      box-shadow: 0 0 0 #ff3d00;
+      margin-bottom: 0;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #ff3d00;
+      margin-bottom: 10px;
+    }
+  }
+
+  @keyframes ball2 {
+    0% {
+      box-shadow: 30px 0 0 #fff;
+    }
+    50% {
+      box-shadow: 0 0 0 #fff;
+      margin-top: -20px;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #fff;
+      margin-top: 0;
+    }
+  }
+  
 /***** Page d'accueil *****/
 /*** Base ***/
 .primaire{
@@ -203,11 +267,21 @@ ol{
     margin: 0px 0px 12px 13px;
 }
 
-.coeur{
+.restaurants i{
     font-size: 22px;
     position: absolute;
-    right: 20px;
+    right: 70px;
     bottom: 33px;
+    margin-right: 0px;
+}
+
+.coeurplein{
+    opacity: 0;
+}
+
+.coeurplein:hover{
+    opacity: 1;
+    color: linear-gradient(0deg, #9356dc, #FF79DA);
 }
 
 /*** Footer ***/
@@ -248,25 +322,18 @@ ul{
 
 
 /***** Menu *****/
-.section-photo{
-    width: 375px;
-    height: 275px;
-}
-
 .photo{
-    width: 375px;
-    height: 275px;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    height: 60%;
 }
 
 /*** Carte ***/
 .section-menu{
-    height: 1300px;
+    width: 100%;
     background-color: #F7F7F7;
     border-radius: 40px 40px 0px 0px;
     margin: -40px 0px 0px 0px;
-    position: absolute;
+    position: relative;
 }
 
 .section-menu h2{
@@ -280,16 +347,26 @@ ul{
 
 .section-menu h3{
     font-weight: 400;
-    margin: 0px;
-    padding: 22px 212px 16px 25px;
+    margin: 22px 0px 16px 13px;
+    text-decoration: underline;
+    text-decoration-color: #99E2D0;
 }
+
 .plat-carte{
-    width: 323px;
-    height: 45px;
     margin: 0px 13px 12px 13px;
-    padding: 12px 13.5px 12px 15px;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.description{
+    width: 95%;
+    padding: 12px 0px 12px 15px;
 }
 
 .plat-carte h4{
@@ -304,9 +381,50 @@ ul{
 
 .prix{
     display: flex;
-    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 35px 16px 12px 0px;
+    font-weight: 700;
+
+    transition: margin-right 0.5s;
 }
 
+.check{
+    border-radius: 0px 15px 15px 0px;
+    background-color: #99E2D0;
+    margin-right: -54px;
+}
+
+.prix:hover{
+    margin-right: 0px;
+
+}
+
+.fa-circle-check{
+    color: white;
+    margin: 25px 19px;
+}
+
+.section-menu button{
+    margin: 30px 35%;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    padding: 13px 19px;
+    background-image: linear-gradient(0deg, #9356dc, #FF79DA);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.section-menu a{
+    color: white;
+}
+
+.section-menu button:hover{
+    opacity: 0.9;
+    scale: 1;
+}
+
+/***media queries index***/
 @media (min-width: 1135px) {
     ol{
         display: flex;
@@ -349,5 +467,19 @@ ul{
 
     .footer ul{
     }
+}
 
+/***media queries menu***/
+@media (min-width: 1135px){
+    .section-menu{
+        width: 70%;
+        padding-right: 100px;
+        padding-left: 100px;
+        margin: -40px 50px 0px 50px
+    }
+
+    h2{
+        display: flex;
+        justify-content: center;
+    }
 }
