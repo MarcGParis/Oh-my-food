@@ -1,0 +1,265 @@
+/***** Page d'accueil *****/
+/*** Base ***/
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0);
+}
+
+/*** Header ***/
+header {
+  height: 113px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  height: 30px;
+  width: 162px;
+  margin: auto;
+}
+
+.localisation {
+  background-color: #EAEAEA;
+  text-align: center;
+  margin: 0px;
+  padding: 15px;
+}
+
+.fa-location-dot {
+  margin-right: 17px;
+}
+
+/*** Explorer ***/
+.explorer {
+  background-color: #F3F3F3;
+  text-align: center;
+}
+.explorer h2 {
+  margin: 0px;
+  padding: 40px 58px 20px 42px;
+}
+.explorer h2 p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 21px;
+  margin: 0px 26px 0px 34px;
+}
+.explorer h2 p button {
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  padding: 13px 19px;
+  margin: 30px;
+  background: linear-gradient(0deg, #9356dc, #FF79DA);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+.explorer h2 p button a {
+  color: white;
+}
+.explorer h2 p button a button:hover {
+  opacity: 0.9;
+}
+
+/*** Fonctionnement ***/
+.fonctionnement {
+  height: 440px;
+}
+.fonctionnement .h2 {
+  margin: 0px;
+  padding: 48px 80px 10px 20px;
+}
+.fonctionnement .h2 .li {
+  list-style-type: none;
+  background-color: #F7F7F7;
+  padding: 28px 38px;
+  flex-grow: 1;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.chiffre {
+  position: absolute;
+  left: 20px;
+  width: 24px;
+  height: 24px;
+  background: #9356DC;
+  border-radius: 40px;
+}
+
+.btn-fonctionnement i {
+  display: flex;
+  align-items: center;
+  margin: 0px 23px;
+}
+
+.btn-fonctionnement {
+  width: 322px;
+  height: 72px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  margin: 25px 20px 25px 33px;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-fonctionnement p {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 28px 38px 28px 0px;
+  color: black;
+}
+
+.fa-mobile-screen-button {
+  color: #7E7E7E;
+}
+
+.fa-list-ul {
+  color: #7E7E7E;
+}
+
+.fa-store {
+  color: #9356DC;
+}
+
+/*** Restaurants ***/
+.restaurants {
+  background-color: #F3F3F3;
+  height: 1226px;
+}
+
+.restaurants h2 {
+  padding-top: 54px;
+  padding-left: 20px;
+  margin: 0px;
+}
+
+.card {
+  width: 340px;
+  height: 251px;
+  background-color: white;
+  border-radius: 15px;
+  margin: 18px 18px 18px 17px;
+}
+
+.plat {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  box-sizing: border-box;
+}
+
+.card h3 {
+  margin: 16px 0px 5px 13px;
+}
+
+.card p {
+  margin: 0px 0px 12px 13px;
+}
+
+/*** Footer ***/
+.footer {
+  background-color: #353535;
+}
+
+.footer h3 {
+  font-family: "Shrikhand", cursive;
+  color: #FFFFFF;
+  font-size: 18px;
+  margin: 0px;
+  padding: 22px 0px 16px 25px;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding-left: 25px;
+  padding-bottom: 22px;
+}
+
+li {
+  padding-bottom: 7px;
+}
+
+.icone-footer {
+  width: 11px;
+  height: 13px;
+  color: #FFFFFF;
+  margin-right: 15px;
+}
+
+.footer a {
+  color: white;
+}
+
+/***** Menu *****/
+.section-photo {
+  width: 375px;
+  height: 275px;
+}
+
+.photo {
+  position: absolute;
+  width: 375px;
+  height: 275px;
+}
+
+/*** Carte ***/
+.section-menu {
+  height: 1121px;
+  background-color: #F7F7F7;
+  border-radius: 40px 40px 0px 0px;
+}
+
+.section-menu h2 {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 41px;
+  margin: 0px;
+  padding: 32px 17px 0px 17px;
+}
+
+.section-menu h3 {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  margin: 0px;
+  padding: 22px 212px 16px 25px;
+}
+
+.plat-carte {
+  width: 323px;
+  height: 72px;
+  margin: 0px 13px 12px 13px;
+  padding: 12px 13.5px 12px 15px;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.plat-carte h4 {
+  margin: 0px;
+}
+
+.plat-carte p {
+  margin: 0px;
+  font-size: 15px;
+}
+
+.prix {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*# sourceMappingURL=style.scs.map */
