@@ -353,36 +353,37 @@ ul{
 }
 
 .plat-carte{
-    margin: 0px 13px 12px 13px;
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-
+    width: 95%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 
     overflow: hidden;
 }
 
-.description{
-    width: 95%;
-    padding: 12px 0px 12px 15px;
+.description , .prix{
+    padding: 12px 15px;
 }
 
 .plat-carte h4{
-    margin: 0px;
-    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .plat-carte p{
-    margin: 0px;
     font-size: 15px;
 }
 
 .prix{
     display: flex;
     align-items: flex-end;
-    padding: 35px 16px 12px 0px;
+    margin-left: auto;
+    margin-right: 15px;
+    
+
     font-weight: 700;
 
     transition: margin-right 0.5s;
@@ -391,17 +392,14 @@ ul{
 .check{
     border-radius: 0px 15px 15px 0px;
     background-color: #99E2D0;
-    margin-right: -54px;
 }
 
 .prix:hover{
-    margin-right: 0px;
 
 }
 
 .fa-circle-check{
     color: white;
-    margin: 25px 19px;
 }
 
 .section-menu button{
