@@ -92,6 +92,7 @@ $text-color: #000000;
 
 }
 @mixin base-card{
+    background: #FFFFFF;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
 }
@@ -353,6 +354,7 @@ header a{
     background-color: #F7F7F7;
     border-radius: 40px 40px 0px 0px;
     margin: -40px 0px 0px 0px;
+    padding: 15% 5% 1% 5%;
     position: relative;
     h2{
         font-family: 'Shrikhand';
@@ -360,47 +362,57 @@ header a{
         font-size: 28px;
         line-height: 41px;
         margin: 0px;
-        padding: 32px 17px 0px 17px;
+        padding: 0px 17px 2px 17px;
     }
     h3{
         font-family: 'roboto';
-        font-weight: 400;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
         margin: 0px;
-        padding: 22px 212px 16px 25px;
+        padding: 40px 0px 12px 0px;
     }
 }
 
 .plat-carte{
-    margin: 0px 13px 12px 13px;
-    box-shadow: 0px 4px 151px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    @include base-card;
+    margin-top: 12px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
     overflow: hidden;
-    h4{
-        margin: 0px;
-        padding-bottom: 5px;
+    .description{
+        width: 95%;
+        padding: 12px 0px 12px 15px;
+        h4{
+            margin: 0px;
+            padding-bottom: 5px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+        }
+        p{
+            margin: 0px;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
+        }
     }
-    p{
-        margin: 0px;
-        font-size: 15px;
-    }
+    
 }
 
-.description{
-    width: 95%;
-    padding: 12px 0px 12px 15px;
-}
-.plat-carte p{
-    margin: 0px;
-    font-size: 15px;
-}
+
 
 .prix{
     display: flex;
     justify-content: flex-end;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    :hover{
+        margin-right: 0px;
+    }
 }
 
 .check{
@@ -409,35 +421,27 @@ header a{
     margin-right: -54px;
 }
 
-.prix:hover{
-    margin-right: 0px;
-
-}
-
 .fa-circle-check{
     color: white;
     margin: 25px 19px;
 }
 
 .section-menu button{
-    margin: 30px 35%;
+    @include background-btn;
     font-weight: 500;
     font-size: 16px;
+    padding: 15px 48px;
+    margin: 10%auto;
+    display: flex;
+    justify-content: center;
     border: none;
-    border-radius: 25px;
-    padding: 13px 19px;
-    background-image: linear-gradient(0deg, #9356dc, #FF79DA);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    button:hover{
+        opacity: 0.9;
+        scale: 1;
+    }
 }
 
-.section-menu a{
-    color: white;
-}
 
-.section-menu button:hover{
-    opacity: 0.9;
-    scale: 1;
-}
 
 /***media queries index***/
 @media (min-width: 1135px) {
