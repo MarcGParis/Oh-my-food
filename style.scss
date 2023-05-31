@@ -237,11 +237,6 @@ header{
     }    
 }
 
-.coeur-plein{
-    position: absolute;
-    font-size: 22px
-}
-
 .card{
     @include base-card;
     height: 251px;
@@ -266,24 +261,30 @@ header{
     object-fit: cover;
 }
 
-.nouveau{
+.coeur{
     position: relative;
-    ::before{
-        content: "Nouveau";
-        font-weight: 500;
-        font-size: 14px;
+    bottom: 35px;
+    left: 90%;
+    font-size: 22px;
+    &__vide{
         position: absolute;
-        width: 80px;
-        height: 29px;
-        background-color: $third-color;
-        color: #008766;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        right: 15px;
-        top: 15px;
-        border-radius: 2px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        color: black;
+        &:hover {
+            opacity: 0;
+        }
+    }
+    &__plein{
+        position: absolute;
+        opacity: 0;
+        background: linear-gradient($second-color, $main-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 400ms;
+        &:hover {
+            opacity: 1;
+    
+        }
     }
 }
 

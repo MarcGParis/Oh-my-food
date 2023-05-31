@@ -197,11 +197,6 @@ button:hover {
   margin: 0% 0% 4% 1%;
 }
 
-.coeur-plein {
-  position: absolute;
-  font-size: 22px;
-}
-
 .card {
   background: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -234,25 +229,30 @@ button:hover {
      object-fit: cover;
 }
 
-.nouveau {
+.coeur {
   position: relative;
+  bottom: 35px;
+  left: 90%;
+  font-size: 22px;
 }
-.nouveau ::before {
-  content: "Nouveau";
-  font-weight: 500;
-  font-size: 14px;
+.coeur__vide {
   position: absolute;
-  width: 80px;
-  height: 29px;
-  background-color: #99E2D0;
-  color: #008766;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 15px;
-  top: 15px;
-  border-radius: 2px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  color: black;
+}
+.coeur__vide:hover {
+  opacity: 0;
+}
+.coeur__plein {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 400ms;
+}
+.coeur__plein:hover {
+  opacity: 1;
 }
 
 /*** Footer ***/
