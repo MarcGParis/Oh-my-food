@@ -356,10 +356,11 @@ header a {
 
 .prix {
   display: flex;
-  justify-content: flex-end;
+  align-items: flex-end;
   font-weight: 700;
   font-size: 15px;
   line-height: 18px;
+  margin: 0px 16px 12px;
 }
 .prix :hover {
   margin-right: 0px;
