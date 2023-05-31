@@ -171,13 +171,14 @@ header{
         font-size: 16px;
         border: none;
         padding: 13px 19px;
-        margin: 30px;
+        margin: 30px 0px;
+        cursor: default;
         @include background-btn;
+        &:hover{
+            opacity: 0.9;
+        }
     }
     
-    button:hover{
-        opacity: 0.9;
-    }
 
 /*** Fonctionnement ***/
 .fonctionnement{
@@ -303,20 +304,20 @@ header{
         list-style: none;
         margin: 0px;
         padding: 0px;
+        li{
+            padding-bottom: 3%;
+            a{
+                color: #FFFFFF;
+            }
+        }
     }
-    li{
-        padding-bottom: 3%;
-    }
-    a{
-        color: #FFFFFF;
-    }
-}
-    .icone-footer{
+    &__icone{
         width: 11px;
         height: 13px;
         color: #FFFFFF;
         margin-right: 15px;
     }
+}
 
 /***** Menu *****/
 /*** Header ***/
@@ -428,7 +429,7 @@ header a{
 
 
 /***media queries index***/
-@media (min-width: 1135px) {
+@media (min-width: 767px) {
     ol{
         display: flex;
         flex-direction: row;
@@ -468,7 +469,7 @@ header a{
 }
 
 /***media queries menu***/
-@media (min-width: 1135px){
+@media (min-width: 767px){
     .section-menu{
         width: 70%;
         padding-right: 100px;
