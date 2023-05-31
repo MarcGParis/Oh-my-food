@@ -125,7 +125,8 @@ button {
   font-size: 16px;
   border: none;
   padding: 13px 19px;
-  margin: 30px;
+  margin: 30px 0px;
+  cursor: default;
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
@@ -133,7 +134,6 @@ button {
 button a {
   color: #FFFFFF;
 }
-
 button:hover {
   opacity: 0.9;
 }
@@ -272,14 +272,13 @@ button:hover {
   margin: 0px;
   padding: 0px;
 }
-.footer li {
+.footer ul li {
   padding-bottom: 3%;
 }
-.footer a {
+.footer ul li a {
   color: #FFFFFF;
 }
-
-.icone-footer {
+.footer__icone {
   width: 11px;
   height: 13px;
   color: #FFFFFF;
@@ -398,7 +397,7 @@ header a {
 }
 
 /***media queries index***/
-@media (min-width: 1135px) {
+@media (min-width: 767px) {
   ol {
     display: flex;
     flex-direction: row;
@@ -432,7 +431,7 @@ header a {
   }
 }
 /***media queries menu***/
-@media (min-width: 1135px) {
+@media (min-width: 767px) {
   .section-menu {
     width: 70%;
     padding-right: 100px;
