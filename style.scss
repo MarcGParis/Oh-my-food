@@ -3,7 +3,7 @@
 }
 /***loader***/
 /*<span class="loader"></span>*/
-.loader {
+/**.loader {
     animation: rotate 1s infinite;
     height: 50px;
     width: 50px;
@@ -63,7 +63,7 @@
       box-shadow: 30px 0 0 #fff;
       margin-top: 0;
     }
-}
+}***/
 
 /***** Page d'accueil *****/
 /*** Base ***/
@@ -231,16 +231,15 @@ header{
 .restaurants{
     background-color: $mainbackground-color;
     padding: 15% 5%;
+    position: relative;
     h2{
         margin: 0% 0% 4% 1%;
-    }
-    i{
-        font-size: 22px;
-        position: absolute;
-        right: 70px;
-        bottom: 33px;
-        margin-right: 0px;
     }    
+}
+
+.coeur-plein{
+    position: absolute;
+    font-size: 22px
 }
 
 .card{
@@ -276,7 +275,7 @@ header{
         position: absolute;
         width: 80px;
         height: 29px;
-        background-color: #99E2D0;
+        background-color: $third-color;
         color: #008766;
         display: flex;
         justify-content: center;
@@ -286,23 +285,6 @@ header{
         border-radius: 2px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     }
-}
-
-.restaurants i{
-    font-size: 22px;
-    position: absolute;
-    right: 70px;
-    bottom: 33px;
-    margin-right: 0px;
-}
-
-.coeurplein{
-    opacity: 0;
-}
-
-.coeurplein:hover{
-    opacity: 1;
-    color: linear-gradient(0deg, #9356dc, #FF79DA);
 }
 
 /*** Footer ***/
@@ -432,7 +414,7 @@ header a{
     font-weight: 500;
     font-size: 16px;
     padding: 15px 48px;
-    margin: 10%auto;
+    margin: 40px auto;
     display: flex;
     justify-content: center;
     border: none;

@@ -4,73 +4,67 @@
 
 /***loader***/
 /*<span class="loader"></span>*/
-.loader {
-  animation: rotate 1s infinite;
-  height: 50px;
-  width: 50px;
-}
+/**.loader {
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+  }
 
-.loader:before,
-.loader:after {
-  border-radius: 50%;
-  content: "";
-  display: block;
-  height: 20px;
-  width: 20px;
-}
-
-.loader:before {
-  animation: ball1 1s infinite;
-  background-color: #fff;
-  box-shadow: 30px 0 0 #ff3d00;
-  margin-bottom: 10px;
-}
-
-.loader:after {
-  animation: ball2 1s infinite;
-  background-color: #ff3d00;
-  box-shadow: 30px 0 0 #fff;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg) scale(0.8);
+  .loader:before,
+  .loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
   }
-  50% {
-    transform: rotate(360deg) scale(1.2);
-  }
-  100% {
-    transform: rotate(720deg) scale(0.8);
-  }
-}
-@keyframes ball1 {
-  0% {
-    box-shadow: 30px 0 0 #ff3d00;
-  }
-  50% {
-    box-shadow: 0 0 0 #ff3d00;
-    margin-bottom: 0;
-    transform: translate(15px, 15px);
-  }
-  100% {
+  .loader:before {
+    animation: ball1 1s infinite;
+    background-color: #fff;
     box-shadow: 30px 0 0 #ff3d00;
     margin-bottom: 10px;
   }
-}
-@keyframes ball2 {
-  0% {
+  .loader:after {
+    animation: ball2 1s infinite;
+    background-color: #ff3d00;
     box-shadow: 30px 0 0 #fff;
   }
-  50% {
-    box-shadow: 0 0 0 #fff;
-    margin-top: -20px;
-    transform: translate(15px, 15px);
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg) scale(0.8) }
+    50% { transform: rotate(360deg) scale(1.2) }
+    100% { transform: rotate(720deg) scale(0.8) }
   }
-  100% {
-    box-shadow: 30px 0 0 #fff;
-    margin-top: 0;
+
+  @keyframes ball1 {
+    0% {
+      box-shadow: 30px 0 0 #ff3d00;
+    }
+    50% {
+      box-shadow: 0 0 0 #ff3d00;
+      margin-bottom: 0;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #ff3d00;
+      margin-bottom: 10px;
+    }
   }
-}
+
+  @keyframes ball2 {
+    0% {
+      box-shadow: 30px 0 0 #fff;
+    }
+    50% {
+      box-shadow: 0 0 0 #fff;
+      margin-top: -20px;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #fff;
+      margin-top: 0;
+    }
+}***/
 /***** Page d'accueil *****/
 /*** Base ***/
 body {
@@ -197,16 +191,15 @@ button:hover {
 .restaurants {
   background-color: #F7F7F7;
   padding: 15% 5%;
+  position: relative;
 }
 .restaurants h2 {
   margin: 0% 0% 4% 1%;
 }
-.restaurants i {
-  font-size: 22px;
+
+.coeur-plein {
   position: absolute;
-  right: 70px;
-  bottom: 33px;
-  margin-right: 0px;
+  font-size: 22px;
 }
 
 .card {
@@ -260,23 +253,6 @@ button:hover {
   top: 15px;
   border-radius: 2px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-}
-
-.restaurants i {
-  font-size: 22px;
-  position: absolute;
-  right: 70px;
-  bottom: 33px;
-  margin-right: 0px;
-}
-
-.coeurplein {
-  opacity: 0;
-}
-
-.coeurplein:hover {
-  opacity: 1;
-  color: linear-gradient(0deg, #9356dc, #FF79DA);
 }
 
 /*** Footer ***/
@@ -408,7 +384,7 @@ header a {
   font-weight: 500;
   font-size: 16px;
   padding: 15px 48px;
-  margin: 10% auto;
+  margin: 40px auto;
   display: flex;
   justify-content: center;
   border: none;
