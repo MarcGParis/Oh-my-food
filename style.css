@@ -204,6 +204,25 @@ button a {
   border-radius: 15px;
   height: 251px;
   margin-bottom: 5%;
+  position: relative;
+}
+.card .nouveau {
+  position: absolute;
+  width: 80px;
+  height: 29px;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+.card .nouveau p {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  color: #008766;
 }
 .card h3 {
   font-weight: 700;
@@ -250,7 +269,7 @@ button a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transition: all 400ms;
+  transition: all 600ms;
 }
 .coeur__plein:hover {
   opacity: 1;

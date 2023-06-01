@@ -243,6 +243,26 @@ header{
     @include base-card;
     height: 251px;
     margin-bottom: 5%;
+    position: relative;
+    .nouveau{
+        position: absolute;
+        width: 80px;
+        height: 29px;
+        top: 15px;
+        right: 15px;
+        background-color: $third-color;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
+        p{
+            font-weight: 500;
+            font-size: 14px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            color: #008766;
+        }
+        
+    }
     h3{
         @include index-h3;
         margin: 16px 0px 5px 13px;
@@ -282,10 +302,9 @@ header{
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        transition: all 400ms;
+        transition: all 600ms;
         &:hover {
             opacity: 1;
-    
         }
     }
 }
