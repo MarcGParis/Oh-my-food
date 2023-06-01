@@ -354,6 +354,11 @@ header a {
   display: flex;
   overflow: hidden;
 }
+.plat-carte:hover .check, .plat-carte:hover .prix {
+  margin-right: 0px;
+  transition: all 700ms;
+  transform: translateX(0px);
+}
 .plat-carte .description {
   margin: 12px 0px 12px 15px;
 }
@@ -377,6 +382,8 @@ header a {
   padding: 16px;
   font-weight: 700;
   font-size: 15px;
+  transition: all 700ms;
+  transform: translateX(59px);
 }
 .plat-carte .check {
   width: 59px;
@@ -384,7 +391,8 @@ header a {
   border-radius: 0px 15px 15px 0px;
   display: flex;
   background-color: #99E2D0;
-  margin-right: -59px;
+  transition: all 700ms;
+  transform: translateX(59px);
 }
 .plat-carte .check .fa-circle-check {
   width: 59px;
@@ -394,10 +402,6 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.plat-carte .check:hover {
-  margin-right: 0px;
-  transition: all 700ms;
 }
 
 .section-menu button {

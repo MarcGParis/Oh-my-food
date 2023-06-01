@@ -384,6 +384,14 @@ header a{
     margin-top: 12px;
     display: flex;
     overflow: hidden;
+    &:hover {
+        .check, .prix{
+        margin-right: 0px;
+        transition: all 700ms;
+        transform: translateX(0px);
+        }
+    }
+    
     .description{
         margin: 12px 0px 12px 15px;
         h4,p{
@@ -407,6 +415,9 @@ header a{
         padding: 16px;
         font-weight: 700;
         font-size: 15px;
+        transition: all 700ms;
+        transform: translateX(59px);
+
     }
     .check{
         width: 59px;
@@ -414,7 +425,8 @@ header a{
         border-radius: 0px 15px 15px 0px;
         display: flex;
         background-color: $third-color;
-        margin-right: -59px;
+        transition: all 700ms;
+        transform: translateX(59px);
         .fa-circle-check{
             width: 59px;
             height: 69px;
@@ -423,10 +435,6 @@ header a{
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        &:hover{
-            margin-right: 0px;
-            transition: all 700ms;
         }
     }
 }
