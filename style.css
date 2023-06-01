@@ -121,21 +121,22 @@ header {
 }
 
 button {
-  font-weight: 500;
-  font-size: 16px;
-  border: none;
   padding: 13px 19px;
   margin: 30px 0px;
   cursor: default;
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
-}
-button a {
-  color: #FFFFFF;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 800ms;
 }
 button:hover {
   opacity: 0.9;
+}
+button a {
+  color: #FFFFFF;
 }
 
 /*** Fonctionnement ***/
@@ -381,20 +382,20 @@ header a {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
+  border: none;
   font-weight: 500;
   font-size: 16px;
+  transition: all 800ms;
   padding: 15px 48px;
   margin: 40px auto;
   display: flex;
   justify-content: center;
-  border: none;
+}
+.section-menu button:hover {
+  opacity: 0.9;
 }
 .section-menu button a {
   color: #FFFFFF;
-}
-.section-menu button button:hover {
-  opacity: 0.9;
-  scale: 1;
 }
 
 /***media queries index***/
