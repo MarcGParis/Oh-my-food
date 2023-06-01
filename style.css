@@ -327,55 +327,100 @@ header a {
   padding: 40px 0px 12px 0px;
 }
 
+/*.plat-carte{
+    @include base-card;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    overflow: hidden;
+    .description{
+        width: 95%;
+        padding: 12px 0px 12px 15px;
+        h4{
+            margin: 0px;
+            padding-bottom: 5px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+        }
+        p{
+            margin: 0px;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+    .prix{
+        display: flex;
+        align-items: flex-end;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        margin: 0px 16px 12px 0px;
+        &:hover{
+            margin-right: 0px;
+        }
+    }
+    .check{
+        margin-right: -54px;
+
+    }
+}*/
 .plat-carte {
   background: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   margin-top: 12px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   overflow: hidden;
 }
 .plat-carte .description {
-  width: 95%;
-  padding: 12px 0px 12px 15px;
+  margin: 12px 0px 12px 15px;
+}
+.plat-carte .description h4, .plat-carte .description p {
+  margin: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .plat-carte .description h4 {
-  margin: 0px;
-  padding-bottom: 5px;
   font-weight: 500;
   font-size: 18px;
-  line-height: 21px;
 }
 .plat-carte .description p {
-  margin: 0px;
   font-weight: 300;
   font-size: 15px;
-  line-height: 18px;
 }
-
-.prix {
+.plat-carte .prix {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  margin-left: auto;
+  padding: 16px;
   font-weight: 700;
   font-size: 15px;
-  line-height: 18px;
-  margin: 0px 16px 12px;
 }
-.prix :hover {
-  margin-right: 0px;
-}
-
-.check {
+.plat-carte .check {
+  width: 59px;
+  height: 69px;
   border-radius: 0px 15px 15px 0px;
+  display: flex;
   background-color: #99E2D0;
-  margin-right: -54px;
+  margin-right: -59px;
 }
-
-.fa-circle-check {
+.plat-carte .check .fa-circle-check {
+  width: 59px;
+  height: 69px;
+  font-size: 20px;
   color: white;
-  margin: 25px 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plat-carte .check:hover {
+  margin-right: 0px;
+  transition: all 700ms;
 }
 
 .section-menu button {

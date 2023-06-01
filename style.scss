@@ -360,7 +360,7 @@ header a{
     }
 }
 
-.plat-carte{
+/*.plat-carte{
     @include base-card;
     margin-top: 12px;
     display: flex;
@@ -385,32 +385,74 @@ header a{
             line-height: 18px;
         }
     }
-    
-}
-
-
-
-.prix{
-    display: flex;
-    align-items: flex-end;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 18px;
-    margin: 0px 16px 12px;
-    :hover{
-        margin-right: 0px;
+    .prix{
+        display: flex;
+        align-items: flex-end;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        margin: 0px 16px 12px 0px;
+        &:hover{
+            margin-right: 0px;
+        }
     }
-}
+    .check{
+        margin-right: -54px;
+        
+    }
+}*/
 
-.check{
-    border-radius: 0px 15px 15px 0px;
-    background-color: #99E2D0;
-    margin-right: -54px;
-}
-
-.fa-circle-check{
-    color: white;
-    margin: 25px 19px;
+.plat-carte{
+    @include base-card;
+    margin-top: 12px;
+    display: flex;
+    overflow: hidden;
+    .description{
+        margin: 12px 0px 12px 15px;
+        h4,p{
+            margin: auto;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        h4{
+            font-weight: 500;
+            font-size: 18px;
+        }
+        p{
+            font-weight: 300;
+            font-size: 15px;
+        }
+    }
+    .prix{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        padding: 16px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    .check{
+        width: 59px;
+        height: 69px;
+        border-radius: 0px 15px 15px 0px;
+        display: flex;
+        background-color: $third-color;
+        margin-right: -59px;
+        .fa-circle-check{
+            width: 59px;
+            height: 69px;
+            font-size: 20px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &:hover{
+            margin-right: 0px;
+            transition: all 700ms;
+        }
+    }
 }
 
 .section-menu button{
@@ -420,8 +462,6 @@ header a{
     display: flex;
     justify-content: center;
 }
-
-
 
 /***media queries index***/
 @media (min-width: 767px) {
