@@ -141,7 +141,7 @@ button a {
 
 /*** Fonctionnement ***/
 .fonctionnement {
-  padding: 15% 6% 15% 8%;
+  padding: 5% 6% 5% 8%;
 }
 .fonctionnement h2 {
   margin: 0px 0px 20px 0px;
@@ -191,8 +191,7 @@ button a {
 /*** Restaurants ***/
 .restaurants {
   background-color: #F7F7F7;
-  padding: 15% 5%;
-  position: relative;
+  padding: 5%;
 }
 .restaurants h2 {
   margin: 0% 0% 4% 1%;
@@ -204,7 +203,6 @@ button a {
   border-radius: 15px;
   height: 251px;
   margin-bottom: 5%;
-  position: relative;
 }
 .card h3 {
   font-weight: 700;
@@ -336,7 +334,7 @@ header a {
   font-size: 28px;
   line-height: 41px;
   margin: 0px;
-  padding: 0px 17px 2px 17px;
+  padding: 0px 17px 2px 0px;
 }
 .section-menu h3 {
   font-family: "roboto";
@@ -345,6 +343,14 @@ header a {
   line-height: 19px;
   margin: 0px;
   padding: 40px 0px 12px 0px;
+}
+.section-menu h3::after {
+  content: "";
+  display: flex;
+  height: 3px;
+  width: 40px;
+  background-color: #99E2D0;
+  margin-top: 5px;
 }
 
 .plat-carte {
@@ -426,49 +432,68 @@ header a {
 }
 
 /***media queries index***/
-@media (min-width: 767px) {
-  ol {
+@media (min-width: 1042px) {
+  .fonctionnement {
+    padding: 5% 7%;
+  }
+  .fonctionnement h2 {
+    justify-content: flex-start;
+  }
+  .fonctionnement ol {
     display: flex;
     flex-direction: row;
-  }
-  .fonctionnement {
-    padding: 0% 7%;
+    gap: 5%;
   }
   .restaurants {
-    padding: 0% 2%;
+    padding: 5% 7%;
   }
   .restaurants h2 {
-    padding-left: 7%;
+    margin-left: 0px;
   }
   .desktopcard {
     display: flex;
-    flex-direction: center;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 100px 0px;
   }
-  .card {
-    width: 40%;
-    margin: 25px 50px;
+  .desktopcard .card {
+    width: 45%;
+    margin: 0px;
   }
-  .footer {
+  .desktopcard .footer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
-  .footer h3 {
+  .desktopcard .footer h3 {
     margin: 57px 50px 30px 16px;
   }
 }
-/***media queries menu***/
-@media (min-width: 767px) {
+@media (min-width: 1042px) {
   .section-menu {
     width: 70%;
-    padding-right: 100px;
-    padding-left: 100px;
-    margin: -40px 50px 0px 50px;
+    margin-left: 15%;
+    padding: 5% 5% 1% 5%;
   }
-  h2 {
+  .section-menu h2 {
     display: flex;
     justify-content: center;
   }
-}/*# sourceMappingURL=style.css.map */
+  .section-menu .coeur {
+    left: 75%;
+  }
+}
+/***media queries menu***/
+/***@media (min-width: 767px){
+    .section-menu{
+        width: 70%;
+        padding-right: 100px;
+        padding-left: 100px;
+        margin: -40px 50px 0px 50px
+    }
+
+    h2{
+        display: flex;
+        justify-content: center;
+    }
+}
+}***//*# sourceMappingURL=style.css.map */

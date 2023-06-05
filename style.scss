@@ -183,7 +183,7 @@ header{
 
 /*** Fonctionnement ***/
 .fonctionnement{
-    padding: 15% 6% 15% 8%;
+    padding: 5% 6% 5% 8%;
     h2{
         margin: 0px 0px 20px 0px;
         
@@ -232,8 +232,7 @@ header{
 /*** Restaurants ***/
 .restaurants{
     background-color: $mainbackground-color;
-    padding: 15% 5%;
-    position: relative;
+    padding: 5%;
     h2{
         margin: 0% 0% 4% 1%;
     }    
@@ -243,7 +242,6 @@ header{
     @include base-card;
     height: 251px;
     margin-bottom: 5%;
-    position: relative;
     h3{
         @include index-h3;
         margin: 16px 0px 5px 13px;
@@ -367,7 +365,7 @@ header a{
         font-size: 28px;
         line-height: 41px;
         margin: 0px;
-        padding: 0px 17px 2px 17px;
+        padding: 0px 17px 2px 0px;
     }
     h3{
         font-family: 'roboto';
@@ -376,6 +374,14 @@ header a{
         line-height: 19px;
         margin: 0px;
         padding: 40px 0px 12px 0px;
+        &::after{
+            content: "";
+            display: flex;
+            height: 3px;
+            width: 40px;
+            background-color: $third-color;
+            margin-top: 5px;
+        }
     }
 }
 
@@ -448,33 +454,34 @@ header a{
 }
 
 /***media queries index***/
-@media (min-width: 767px) {
-    ol{
-        display: flex;
-        flex-direction: row;
-    }
-
+@media (min-width: 1042px) {
     .fonctionnement{
-        padding: 0% 7%;
+        padding: 5% 7%;
+        h2{
+            justify-content: flex-start;
+        }
+        ol{
+            display: flex;
+            flex-direction: row;
+            gap: 5%;
+        }
     }
     
     .restaurants{
-        padding: 0% 2%;
+        padding: 5% 7%;
         h2{
-            padding-left: 7%;
+            margin-left: 0px;
         }
     }
 
     .desktopcard{
         display: flex;
-        flex-direction: center;
         flex-wrap: wrap;
-        justify-content: center;
-    }
+        gap: 100px 0px;
 
     .card{
-        width: 40%;
-        margin: 25px 50px;
+        width: 45%;
+        margin: 0px;
     }
 
     .footer{
@@ -486,9 +493,24 @@ header a{
         }
     }
 }
+}
 
+@media (min-width: 1042px){
+    .section-menu{
+        width: 70%;
+        margin-left: 15%;
+        padding: 5% 5% 1% 5%;
+        h2{
+            display: flex;
+            justify-content: center;
+        }
+        .coeur{
+            left: 75%;
+        }
+    }
+}
 /***media queries menu***/
-@media (min-width: 767px){
+/***@media (min-width: 767px){
     .section-menu{
         width: 70%;
         padding-right: 100px;
@@ -501,3 +523,4 @@ header a{
         justify-content: center;
     }
 }
+}***/
