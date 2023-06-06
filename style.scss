@@ -308,7 +308,7 @@ header{
 }
 
 /*** Footer ***/
-.footer{
+footer{
     background-color: #353535;
     padding: 10% 5%;
     h3{
@@ -326,6 +326,9 @@ header{
             padding-bottom: 3%;
             a{
                 color: #FFFFFF;
+                i{
+                    margin-right: 10px;
+                }
             }
         }
     }
@@ -404,6 +407,7 @@ header a{
             margin: auto;
             overflow: hidden;
             text-overflow: ellipsis;
+
         }
         h4{
             font-weight: 500;
@@ -479,21 +483,26 @@ header a{
         flex-wrap: wrap;
         gap: 100px 0px;
 
-    .card{
-        width: 45%;
-        margin: 0px;
+        .card{
+            width: 45%;
+            margin: 0px;
+        }
     }
-
-    .footer{
+    
+    footer{
         display: flex;
         flex-direction: row-reverse;
-        justify-content: flex-end;
-        h3{ 
-            margin: 57px 50px 30px 16px;
+        padding: 5% 5% 3% 5%;
+        ul{
+            display: flex;
+            flex-direction: row;
+            li{
+                padding-right: 20px;
+            }
         }
     }
 }
-}
+
 
 @media (min-width: 1042px){
     .section-menu{
@@ -509,18 +518,3 @@ header a{
         }
     }
 }
-/***media queries menu***/
-/***@media (min-width: 767px){
-    .section-menu{
-        width: 70%;
-        padding-right: 100px;
-        padding-left: 100px;
-        margin: -40px 50px 0px 50px
-    }
-
-    h2{
-        display: flex;
-        justify-content: center;
-    }
-}
-}***/

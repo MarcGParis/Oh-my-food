@@ -275,29 +275,32 @@ button a {
 }
 
 /*** Footer ***/
-.footer {
+footer {
   background-color: #353535;
   padding: 10% 5%;
 }
-.footer h3 {
+footer h3 {
   font-family: "Shrikhand", cursive;
   color: #FFFFFF;
   font-size: 18px;
   margin: 0px;
   padding-bottom: 16px;
 }
-.footer ul {
+footer ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
-.footer ul li {
+footer ul li {
   padding-bottom: 3%;
 }
-.footer ul li a {
+footer ul li a {
   color: #FFFFFF;
 }
-.footer__icone {
+footer ul li a i {
+  margin-right: 10px;
+}
+footer__icone {
   width: 11px;
   height: 13px;
   color: #FFFFFF;
@@ -459,13 +462,17 @@ header a {
     width: 45%;
     margin: 0px;
   }
-  .desktopcard .footer {
+  footer {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: flex-end;
+    padding: 5% 5% 3% 5%;
   }
-  .desktopcard .footer h3 {
-    margin: 57px 50px 30px 16px;
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul li {
+    padding-right: 20px;
   }
 }
 @media (min-width: 1042px) {
@@ -481,19 +488,4 @@ header a {
   .section-menu .coeur {
     left: 75%;
   }
-}
-/***media queries menu***/
-/***@media (min-width: 767px){
-    .section-menu{
-        width: 70%;
-        padding-right: 100px;
-        padding-left: 100px;
-        margin: -40px 50px 0px 50px
-    }
-
-    h2{
-        display: flex;
-        justify-content: center;
-    }
-}
-}***//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
