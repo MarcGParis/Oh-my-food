@@ -448,19 +448,19 @@ header a {
     gap: 5%;
   }
   .restaurants {
-    padding: 5% 7%;
+    padding: 5% 7% 0% 7%;
   }
   .restaurants h2 {
     margin-left: 0px;
   }
   .desktopcard {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 100px 0px;
+    justify-content: space-between;
   }
   .desktopcard .card {
     width: 45%;
-    margin: 0px;
   }
   footer {
     display: flex;

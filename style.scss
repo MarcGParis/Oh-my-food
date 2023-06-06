@@ -472,7 +472,7 @@ header a{
     }
     
     .restaurants{
-        padding: 5% 7%;
+        padding: 5% 7% 0% 7%;
         h2{
             margin-left: 0px;
         }
@@ -480,12 +480,12 @@ header a{
 
     .desktopcard{
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        gap: 100px 0px;
+        justify-content: space-between;
 
         .card{
             width: 45%;
-            margin: 0px;
         }
     }
     
