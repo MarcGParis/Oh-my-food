@@ -1,8 +1,7 @@
 *{ 
     box-sizing:border-box
 }
-/***loader***/
-/*<span class="loader"></span>*/
+
 /**.loader {
     animation: rotate 1s infinite;
     height: 50px;
@@ -63,7 +62,7 @@
       box-shadow: 30px 0 0 #fff;
       margin-top: 0;
     }
-}***/
+}
 
 /***** Page d'accueil *****/
 /*** Base ***/
@@ -132,6 +131,8 @@ a{
     text-decoration: none;
     color: $text-color;
 }
+
+/***loader***/
 
 /*** Header ***/
 header{
