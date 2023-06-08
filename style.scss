@@ -2,10 +2,13 @@
     box-sizing:border-box
 }
 
-/**.loader {
+/***.loader {
     animation: rotate 1s infinite;
     height: 50px;
     width: 50px;
+    position:fixed;
+    left: 50%;
+    top: 50%;
   }
 
   .loader:before,
@@ -394,6 +397,8 @@ header a{
     margin-top: 12px;
     display: flex;
     overflow: hidden;
+    animation-name: progress-plat;
+    animation-duration: 2500ms;
     &:hover {
         .check, .prix{
         margin-right: 0px;
@@ -447,6 +452,18 @@ header a{
             justify-content: center;
             align-items: center;
         }
+    }
+}
+
+@keyframes progress-plat{
+    from{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
