@@ -406,7 +406,17 @@ header a{
         transform: translateX(0px);
         }
     }
+    @keyframes progress-plat{
+        from{
+            opacity: 0;
+            transform: translateY(-50%);
+        }
     
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
     .description{
         margin: 12px 0px 12px 15px;
         h4,p{
@@ -455,17 +465,7 @@ header a{
     }
 }
 
-@keyframes progress-plat{
-    from{
-        opacity: 0;
-        transform: translateY(-50%);
-    }
 
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .section-menu button{
     @include background-btn;
