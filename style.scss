@@ -51,8 +51,14 @@ $text-color: #000000;
     font-weight: 500;
     font-size: 16px;
     transition: all 800ms;
-        &:hover{
+        &:active{
             opacity: 0.9;
+        }
+        @media (minwidth: 1024px)
+         {
+            &:hover{
+                opacity: 0.9;
+            }
         }
     a{
         color: #FFFFFF;
@@ -145,6 +151,14 @@ header{
         margin: 30px 0px;
         cursor: default;
         @include background-btn;
+        &:active{
+            opacity: 0.9;
+        }
+        @media (min-width: 1042px) {
+            &:hover {
+                opacity: 0.9;
+            }
+        }
     }
     
 
@@ -257,7 +271,7 @@ header{
         position: absolute;
         color: black;
         &:hover {
-            opacity: 0;
+            opacity: 1;
         }
     }
     &__plein{
@@ -268,8 +282,13 @@ header{
         -webkit-background-clip: text;
         color: transparent;
         transition: all 600ms;
-        &:hover {
+        &:active {
             opacity: 1;
+        }
+        @media (min-width: 1042px) {
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 }
@@ -361,13 +380,34 @@ header a{
     display: flex;
     overflow: hidden;
     animation-name: progress-plat;
-    animation-duration: 2500ms;
-    &:hover {
+    &:active {
         .check, .prix{
         margin-right: 0px;
         transition: all 700ms;
         transform: translateX(0px);
         }
+    }
+    @media (min-width: 1042px) {
+        &:hover {
+            .check, .prix{
+                margin-right: 0px;
+                transition: all 700ms;
+                transform: translateX(0px);
+                }
+        }
+    }
+    &.entree{
+        animation-name: progress-plat;
+        animation-duration: 1000ms;
+    }
+    &.plats{
+        animation-name: progress-plat;
+        animation-duration: 2000ms;
+    }
+
+    &.desserts{
+        animation-name: progress-plat;
+        animation-duration: 3000ms;
     }
     @keyframes progress-plat{
         from{
@@ -488,7 +528,8 @@ header a{
 @media (min-width: 1042px){
     .section-menu{
         width: 70%;
-        margin-left: 15%;
+        margin-left:auto;
+        margin-right:auto;
         padding: 5% 5% 1% 5%;
         h2{
             display: flex;

@@ -96,11 +96,24 @@ button {
   font-size: 16px;
   transition: all 800ms;
 }
-button:hover {
+button:active {
   opacity: 0.9;
+}
+@media (minwidth: 1024px) {
+  button:hover {
+    opacity: 0.9;
+  }
 }
 button a {
   color: #FFFFFF;
+}
+button:active {
+  opacity: 0.9;
+}
+@media (min-width: 1042px) {
+  button:hover {
+    opacity: 0.9;
+  }
 }
 
 /*** Fonctionnement ***/
@@ -223,7 +236,7 @@ button a {
   color: black;
 }
 .coeur__vide:hover {
-  opacity: 0;
+  opacity: 1;
 }
 .coeur__plein {
   position: absolute;
@@ -234,8 +247,13 @@ button a {
   color: transparent;
   transition: all 600ms;
 }
-.coeur__plein:hover {
+.coeur__plein:active {
   opacity: 1;
+}
+@media (min-width: 1042px) {
+  .coeur__plein:hover {
+    opacity: 1;
+  }
 }
 
 /*** Footer ***/
@@ -328,12 +346,30 @@ header a {
   display: flex;
   overflow: hidden;
   animation-name: progress-plat;
-  animation-duration: 2500ms;
 }
-.plat-carte:hover .check, .plat-carte:hover .prix {
+.plat-carte:active .check, .plat-carte:active .prix {
   margin-right: 0px;
   transition: all 700ms;
   transform: translateX(0px);
+}
+@media (min-width: 1042px) {
+  .plat-carte:hover .check, .plat-carte:hover .prix {
+    margin-right: 0px;
+    transition: all 700ms;
+    transform: translateX(0px);
+  }
+}
+.plat-carte.entree {
+  animation-name: progress-plat;
+  animation-duration: 1000ms;
+}
+.plat-carte.plats {
+  animation-name: progress-plat;
+  animation-duration: 2000ms;
+}
+.plat-carte.desserts {
+  animation-name: progress-plat;
+  animation-duration: 3000ms;
 }
 @keyframes progress-plat {
   from {
@@ -403,8 +439,13 @@ header a {
   display: flex;
   justify-content: center;
 }
-.section-menu button:hover {
+.section-menu button:active {
   opacity: 0.9;
+}
+@media (minwidth: 1024px) {
+  .section-menu button:hover {
+    opacity: 0.9;
+  }
 }
 .section-menu button a {
   color: #FFFFFF;
@@ -454,7 +495,8 @@ header a {
 @media (min-width: 1042px) {
   .section-menu {
     width: 70%;
-    margin-left: 15%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 5% 5% 1% 5%;
   }
   .section-menu h2 {
