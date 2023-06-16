@@ -86,8 +86,9 @@ a{
     height: 100%;
     inset: 0;
     z-index: 1;
-    opacity: 0.7;
-    animation: background-disapear 2s forwards;
+    opacity: 1;
+    animation: background-disapear 2s forwards 2s;
+    
     i{
         animation: spin 1s linear infinite;
     }
@@ -95,6 +96,7 @@ a{
 
 @keyframes background-disapear {
     to{
+
         transform: scale(0);
     }
 }
