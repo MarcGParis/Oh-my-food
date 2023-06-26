@@ -8,6 +8,7 @@ body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 a {
@@ -387,6 +388,7 @@ header a {
 .plat-carte .description h4, .plat-carte .description p {
   margin: auto;
   overflow: hidden;
+  flex-wrap: nowrap;
   text-overflow: ellipsis;
 }
 .plat-carte .description h4 {
@@ -409,7 +411,6 @@ header a {
 }
 .plat-carte .check {
   width: 59px;
-  height: 69px;
   border-radius: 0px 15px 15px 0px;
   display: flex;
   background-color: #99E2D0;
@@ -418,7 +419,7 @@ header a {
 }
 .plat-carte .check .fa-circle-check {
   width: 59px;
-  height: 69px;
+  height: auto;
   font-size: 20px;
   color: white;
   display: flex;

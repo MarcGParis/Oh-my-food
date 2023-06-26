@@ -69,6 +69,7 @@ body{
     margin: 0px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
+    overflow-x: hidden;
 }
 
 a{
@@ -427,8 +428,8 @@ header a{
         h4,p{
             margin: auto;
             overflow: hidden;
+            flex-wrap: nowrap;
             text-overflow: ellipsis;
-
         }
         h4{
             font-weight: 500;
@@ -452,7 +453,6 @@ header a{
     }
     .check{
         width: 59px;
-        height: 69px;
         border-radius: 0px 15px 15px 0px;
         display: flex;
         background-color: $third-color;
@@ -460,7 +460,7 @@ header a{
         transform: translateX(59px);
         .fa-circle-check{
             width: 59px;
-            height: 69px;
+            height: auto;
             font-size: 20px;
             color: white;
             display: flex;
