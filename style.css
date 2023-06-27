@@ -388,8 +388,8 @@ header a {
 .plat-carte .description h4, .plat-carte .description p {
   margin: auto;
   overflow: hidden;
-  flex-wrap: nowrap;
   text-overflow: ellipsis;
+  flex-wrap: nowrap;
 }
 .plat-carte .description h4 {
   font-weight: 500;
