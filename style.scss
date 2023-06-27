@@ -69,7 +69,6 @@ body{
     margin: 0px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    overflow-x: hidden;
 }
 
 a{
@@ -268,7 +267,9 @@ header{
 .coeur{
     position: relative;
     bottom: 35px;
-    left: 90%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
     font-size: 22px;
     &__vide{
         position: absolute;
@@ -426,6 +427,7 @@ header a{
     .description{
         margin: 12px 0px 12px 15px;
         h4,p{
+            justify-content: flex-start;
             margin: auto;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -536,9 +538,6 @@ header a{
         h2{
             display: flex;
             justify-content: center;
-        }
-        .coeur{
-            left: 75%;
         }
     }
 }

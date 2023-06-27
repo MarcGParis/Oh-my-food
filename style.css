@@ -8,7 +8,6 @@ body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  overflow-x: hidden;
 }
 
 a {
@@ -229,7 +228,9 @@ button:active {
 .coeur {
   position: relative;
   bottom: 35px;
-  left: 90%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
   font-size: 22px;
 }
 .coeur__vide {
@@ -386,6 +387,7 @@ header a {
   margin: 12px 0px 12px 15px;
 }
 .plat-carte .description h4, .plat-carte .description p {
+  justify-content: flex-start;
   margin: auto;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -503,8 +505,5 @@ header a {
   .section-menu h2 {
     display: flex;
     justify-content: center;
-  }
-  .section-menu .coeur {
-    left: 75%;
   }
 }/*# sourceMappingURL=style.css.map */
