@@ -266,11 +266,11 @@ header{
 
 .coeur{
     position: relative;
-    bottom: 35px;
     display: flex;
     justify-content: flex-end;
     margin-right: 30px;
     font-size: 22px;
+    bottom: 40px;
     &__vide{
         position: absolute;
         color: black;
@@ -426,12 +426,14 @@ header a{
     }
     .description{
         margin: 12px 0px 12px 15px;
+        width: 60%;
         h4,p{
             justify-content: flex-start;
             margin: auto;
             overflow: hidden;
             text-overflow: ellipsis;
-            flex-wrap: nowrap;
+            white-space:nowrap;
+            width: 100%;
         }
         h4{
             font-weight: 500;

@@ -227,11 +227,11 @@ button:active {
 
 .coeur {
   position: relative;
-  bottom: 35px;
   display: flex;
   justify-content: flex-end;
   margin-right: 30px;
   font-size: 22px;
+  bottom: 40px;
 }
 .coeur__vide {
   position: absolute;
@@ -385,13 +385,15 @@ header a {
 }
 .plat-carte .description {
   margin: 12px 0px 12px 15px;
+  width: 60%;
 }
 .plat-carte .description h4, .plat-carte .description p {
   justify-content: flex-start;
   margin: auto;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex-wrap: nowrap;
+  white-space: nowrap;
+  width: 100%;
 }
 .plat-carte .description h4 {
   font-weight: 500;
